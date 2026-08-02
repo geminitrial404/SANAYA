@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Futuristic Hologram Ring 3D Tilts */
+  .perspective-stage {
+    perspective: 1200px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  /* Custom Glassmorphism HUD Card */
+  .hud-glass-card {
+    background: rgba(5, 7, 18, 0.75);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(0, 232, 255, 0.18);
+    box-shadow: 0 0 30px rgba(0, 232, 255, 0.08), inset 0 0 15px rgba(139, 92, 255, 0.05);
+  }
+
+  .hud-glass-card-purple {
+    background: rgba(8, 5, 20, 0.75);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(139, 92, 255, 0.22);
+    box-shadow: 0 0 30px rgba(139, 92, 255, 0.12), inset 0 0 15px rgba(0, 232, 255, 0.05);
+  }
+
+  /* Scanline Overlay */
+  .scanlines-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0),
+      rgba(255,255,255,0) 50%,
+      rgba(0, 232, 255, 0.03) 50%,
+      rgba(0, 232, 255, 0.03)
+    );
+    background-size: 100% 4px;
+  }
+}
+
+@keyframes spinSlow {
+  from { transform: rotateX(74deg) rotateZ(0deg); }
+  to { transform: rotateX(74deg) rotateZ(360deg); }
+}
+
+@keyframes spinSlowReverse {
+  from { transform: rotateX(74deg) rotateZ(360deg); }
+  to { transform: rotateX(74deg) rotateZ(0deg); }
+}
+
+@keyframes floatBeam {
+  0%, 100% { opacity: 0.35; transform: scaleX(0.95) translateY(0px); }
+  50% { opacity: 0.8; transform: scaleX(1.08) translateY(-6px); }
+}
+
+@keyframes holographicPulse {
+  0%, 100% { opacity: 0.5; filter: drop-shadow(0 0 20px rgba(0, 232, 255, 0.4)); }
+  50% { opacity: 0.9; filter: drop-shadow(0 0 40px rgba(139, 92, 255, 0.7)); }
+}
+
+@keyframes ecgPulse {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 14s linear infinite;
+}
+
+.animate-spin-slow-reverse {
+  animation: spinSlowReverse 18s linear infinite;
+}
+
+.animate-float-beam {
+  animation: floatBeam 4s ease-in-out infinite;
+}
+
+.animate-holo-pulse {
+  animation: holographicPulse 3s ease-in-out infinite;
+}
+
+.animate-ecg {
+  animation: ecgPulse 3s linear infinite;
+}
+
