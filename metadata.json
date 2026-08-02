@@ -1,0 +1,6 @@
+{
+  "name": "Sanaya Holographic AI",
+  "description": "Futuristic 3D Holographic AI Companion inside a WebGL projection chamber with real-time voice, Live2D procedural avatar animation, expressive emotions, and long-term memory.",
+  "requestFramePermissions": ["camera", "microphone", "display-capture", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
